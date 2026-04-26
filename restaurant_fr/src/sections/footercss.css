@@ -1,0 +1,132 @@
+/* ===== FOOTER ===== */
+
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding-top: 50px;
+}
+
+/* ===== TOP SECTION ===== */
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10% 40px;
+  flex-wrap: wrap;
+  gap: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* EACH COLUMN */
+
+.footer-section {
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* FIX: anchor styling inside p */
+
+.footer-section p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer-section p:hover {
+  color: #ffb703;
+}
+
+/* ===== BOTTOM ===== */
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* ===== SOCIAL ICONS ===== */
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons span {
+  width: 35px;
+  height: 35px;
+  background: #2a2a2a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* FIX: make anchor fill the circle and center icon */
+
+.social-icons span a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* FIX: normalize icon size */
+
+.social-icons span svg {
+  font-size: 16px;
+}
+
+/* HOVER */
+
+.social-icons span:hover {
+  background: #ffb703;
+  color: #000;
+}
+
+/* OPTIONAL subtle hover effect */
+
+.social-icons span:hover svg {
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+/* ===== COPYRIGHT ===== */
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

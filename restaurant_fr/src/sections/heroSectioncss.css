@@ -1,0 +1,87 @@
+/* heroSectioncss.css */
+
+.hero-section {
+  height: 100vh;
+
+  /* Dark overlay + background image */
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.75)),
+    url('/heroimg.webp');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Content container */
+.hero-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 10%;
+  /* border: 1px solid rgba(250, 0, 0, 1); */
+  max-width: 600px;
+  color: white;
+}
+
+/* Heading */
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Paragraph */
+.hero-content p {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Buttons container */
+.t-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+/* View Menu button (secondary) */
+.menu-button {
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  transition: 0.3s;
+}
+
+.menu-button:hover {
+  background: white;
+  color: black;
+}
+
+/* Book Table button (primary CTA) */
+.bt-button {
+  background: linear-gradient(45deg, #ff7a18, #ffb347);
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  font-weight: 500;
+
+  box-shadow: 
+    0 4px 15px rgba(255, 122, 24, 0.4),
+    0 0 20px rgba(255, 122, 24, 0.3);
+
+  transition: 0.3s ease;
+}
+
+.bt-button:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 6px 20px rgba(255, 122, 24, 0.6),
+    0 0 30px rgba(255, 122, 24, 0.5);
+}

@@ -1,0 +1,109 @@
+/* ===== REVIEWS SECTION ===== */
+
+.reviews {
+  padding: 80px 10%;
+  background: #0f0f0f;
+  color: #fff;
+  text-align: center;
+}
+
+.reviews h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 50px;
+}
+
+/* ===== GRID ===== */
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* ===== CARD ===== */
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: 0.3s ease;
+  text-align: left;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== STARS ===== */
+
+.stars {
+  font-size: 18px;
+  color: #ffb703;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+/* ===== TEXT ===== */
+
+.review-text {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+/* ===== NAME ===== */
+
+.review-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  margin-top: auto;
+}
+
+/* ===== BUTTON ===== */
+
+.review-btn-container {
+  margin-top: 40px;
+}
+
+.review-btn {
+  background: linear-gradient(45deg, #ff7a18, #ffb347);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 
+    0 4px 15px rgba(255, 122, 24, 0.4),
+    0 0 20px rgba(255, 122, 24, 0.3);
+}
+
+.review-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 6px 20px rgba(255, 122, 24, 0.6),
+    0 0 30px rgba(255, 122, 24, 0.5);
+}
+
+.review-btn:active {
+  transform: scale(1);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .reviews h1 {
+    font-size: 32px;
+  }
+}
