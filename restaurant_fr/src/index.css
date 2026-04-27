@@ -70,9 +70,7 @@ ul, ol {
 
 /* ===== REMOVE TAP HIGHLIGHT (ANDROID / CHROME) ===== */
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
+
 
 /* ===== OPTIONAL: ADD PROPER MOBILE FEEDBACK ===== */
 
