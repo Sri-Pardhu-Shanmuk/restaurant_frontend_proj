@@ -43,7 +43,7 @@ ul, ol {
 }
 
 
-/* ===== REMOVE MOBILE TAP EFFECTS ===== */
+/* ===== REMOVE MOBILE TAP / HOVER EFFECTS ===== */
 
 @media (hover: none) {
 
@@ -52,9 +52,15 @@ ul, ol {
   a:active,
   button:hover,
   button:focus,
-  button:active {
+  button:active,
+  span:hover,
+  span:focus,
+  span:active,
+  p:hover,
+  p:focus,
+  p:active {
     color: inherit !important;
-    background: inherit !important;
+    background: transparent !important;
     transform: none !important;
     box-shadow: none !important;
     text-decoration: none !important;
@@ -62,8 +68,20 @@ ul, ol {
 
 }
 
-/* REMOVE TAP HIGHLIGHT (ANDROID FIX) */
+/* ===== REMOVE TAP HIGHLIGHT (ANDROID / CHROME) ===== */
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+/* ===== OPTIONAL: ADD PROPER MOBILE FEEDBACK ===== */
+
+@media (hover: none) {
+
+  button:active,
+  a:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+
 }
