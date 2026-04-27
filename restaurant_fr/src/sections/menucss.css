@@ -1,3 +1,5 @@
+/* ===== MENU ===== */
+
 .menu {
   padding: 80px 10%;
   background: #0f0f0f;
@@ -11,7 +13,8 @@
   margin-bottom: 40px;
 }
 
-/* TABS */
+/* ===== TABS ===== */
+
 .menu-tabs {
   display: flex;
   justify-content: center;
@@ -45,16 +48,18 @@
   bottom: 0;
 }
 
-/* GRID */
+/* ===== GRID ===== */
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* FIX: reduced from 260px */
+  gap: 25px; /* FIX */
 }
 
-/* CARD */
+/* ===== CARD ===== */
+
 .menu-card {
-  background: rgba(255, 255, 255, 0.05); /* glass feel */
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   overflow: hidden;
@@ -66,14 +71,16 @@
   transform: translateY(-6px);
 }
 
-/* IMAGE */
+/* ===== IMAGE ===== */
+
 .menu-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
+
 .menu-card-content {
   padding: 15px;
   text-align: left;
@@ -91,11 +98,13 @@
   margin-bottom: 10px;
 }
 
-/* PRICE */
+/* ===== PRICE ===== */
+
 .price-row {
   display: flex;
   gap: 10px;
   align-items: center;
+  flex-wrap: wrap; /* FIX */
 }
 
 .old-price {
@@ -110,13 +119,31 @@
   font-size: 16px;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
+
+  .menu {
+    padding: 60px 5%; /* FIX */
+  }
+
   .menu h1 {
     font-size: 32px;
   }
 
   .menu-tabs {
-    gap: 15px;
+    gap: 15px; /* FIX */
+    margin-bottom: 30px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* FIX */
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* FORCE single column */
   }
 }

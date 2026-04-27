@@ -13,14 +13,14 @@
   justify-content: space-between;
   padding: 0 10% 40px;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px; /* FIX: reduced from 40px */
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 /* EACH COLUMN */
 
 .footer-section {
-  min-width: 200px;
+  min-width: 180px; /* FIX: reduced from 200px */
 }
 
 .footer-section h3 {
@@ -37,7 +37,7 @@
   transition: 0.2s ease;
 }
 
-/* FIX: anchor styling inside p */
+/* LINK FIX */
 
 .footer-section p a {
   color: inherit;
@@ -78,8 +78,6 @@
   transition: 0.3s ease;
 }
 
-/* FIX: make anchor fill the circle and center icon */
-
 .social-icons span a {
   display: flex;
   align-items: center;
@@ -90,20 +88,14 @@
   text-decoration: none;
 }
 
-/* FIX: normalize icon size */
-
 .social-icons span svg {
   font-size: 16px;
 }
-
-/* HOVER */
 
 .social-icons span:hover {
   background: #ffb703;
   color: #000;
 }
-
-/* OPTIONAL subtle hover effect */
 
 .social-icons span:hover svg {
   transform: scale(1.1);
@@ -120,13 +112,17 @@
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
+
   .footer-top {
     flex-direction: column;
     text-align: center;
+    padding: 0 5% 30px; /* FIX */
+    gap: 25px;
   }
 
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+    padding: 20px 5%; /* FIX */
   }
 }

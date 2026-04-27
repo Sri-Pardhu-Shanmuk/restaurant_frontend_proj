@@ -26,6 +26,7 @@
   width: 100%;
   max-width: 600px;
   color: white;
+  margin-left: 10%;
 }
 
 /* ===== HEADING ===== */
@@ -100,6 +101,9 @@
   .hero-section {
     justify-content: center;
     text-align: center;
+  }
+  .hero-content{
+    margin: 0;
   }
 
   .hero-content h1 {

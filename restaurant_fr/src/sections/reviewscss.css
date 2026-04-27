@@ -17,7 +17,7 @@
 
 .reviews-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* KEEP SAME */
   gap: 30px;
 }
 
@@ -102,8 +102,30 @@
 
 /* ===== RESPONSIVE ===== */
 
+@media (max-width: 900px) {
+  .reviews-container {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    /* slight safety for tablets */
+  }
+}
+
 @media (max-width: 768px) {
+
+  .reviews {
+    padding: 60px 5%; /* FIX padding only */
+  }
+
   .reviews h1 {
     font-size: 32px;
+  }
+
+  .reviews-container {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .reviews-container {
+    grid-template-columns: 1fr; /* FORCE single column */
   }
 }

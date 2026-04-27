@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 60px;
+  gap: 40px; /* FIX: reduced from 60px */
   flex-wrap: wrap;
 }
 
@@ -20,7 +20,7 @@
 
 .contact-left {
   flex: 1;
-  min-width: 280px;
+  min-width: 260px; /* FIX */
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -30,11 +30,11 @@
 
 .contact-item {
   display: flex;
-  align-items: flex-start; /* fixed alignment */
+  align-items: flex-start;
   gap: 15px;
 }
 
-/* TEXT CONTAINER FIX */
+/* TEXT CONTAINER */
 
 .contact-item div {
   display: flex;
@@ -46,7 +46,7 @@
 .icon {
   width: 50px;
   height: 50px;
-  min-width: 50px; /* prevents shifting */
+  min-width: 50px;
   border-radius: 50%;
   background: #ffb703;
   display: flex;
@@ -69,27 +69,15 @@
   font-size: 14px;
   color: #bbb;
   line-height: 1.5;
+  word-break: break-word; /* FIX: prevents overflow */
 }
 
 /* ===== MAP ===== */
 
 .contact-map {
   flex: 1;
-  min-width: 300px;
+  min-width: 260px; /* FIX: reduced from 300px */
 }
-
-/* .map-placeholder {
-  width: 100%;
-  height: 250px;
-  border-radius: 16px;
-  background: #1a1a1a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-  font-size: 14px;
-  border: 1px solid rgba(255,255,255,0.08);
-} */
 
 .contact-map iframe {
   width: 100%;
@@ -101,10 +89,16 @@
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
+
+  .contact {
+    padding: 60px 5%; /* FIX */
+  }
+
   .contact-container {
     flex-direction: column;
-    align-items: center; 
-    text-align: left;        
+    align-items: center;
+    text-align: left;
+    gap: 30px; /* FIX */
   }
 
   .contact-left {

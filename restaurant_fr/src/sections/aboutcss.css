@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
 
+/* ===== ABOUT SECTION ===== */
 
 .about {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6rem;
+  gap: 4rem; /* reduced from 6rem to prevent overflow */
   padding: 80px 10%;
   background-color: #0f0f0f;
   color: #ffffff;
   flex-wrap: wrap;
 }
 
-/* IMAGE */
+/* ===== IMAGE ===== */
+
 .about-image {
   flex: 1;
-  min-width: 300px;
+  min-width: 260px; /* FIX: reduced from 300px */
   position: relative;
 }
 
@@ -27,7 +29,7 @@
   filter: brightness(70%);
 }
 
-/* subtle overlay for cinematic look */
+/* overlay */
 .about-image::after {
   content: "";
   position: absolute;
@@ -40,10 +42,11 @@
   border-radius: 16px;
 }
 
-/* CONTENT */
+/* ===== CONTENT ===== */
+
 .about-content {
   flex: 1;
-  min-width: 300px;
+  min-width: 260px; /* FIX */
 }
 
 .about-content h1 {
@@ -61,6 +64,7 @@
   max-width: 500px;
 }
 
+/* SIGNATURE */
 
 .signature {
   display: block;
@@ -72,11 +76,15 @@
   color: #e0a96d;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
+
   .about {
     flex-direction: column;
     text-align: center;
+    padding: 60px 5%; /* FIX: reduced padding */
+    gap: 2.5rem; /* FIX: reduce spacing */
   }
 
   .about-image img {

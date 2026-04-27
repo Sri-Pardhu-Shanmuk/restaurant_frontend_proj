@@ -10,10 +10,10 @@ const Booking = () => {
 
     const form = e.target;
 
-    const name = form[0].value;
-    const date = form[1].value;
-    const time = form[2].value;
-    const guests = form[3].value;
+    const name = form.name.value;
+    const date = form.date.value;
+    const time = form.time.value;
+    const guests = form.guests.value;
 
     const message = `Table Booking Request:
 Name: ${name}
@@ -21,7 +21,7 @@ Date: ${date}
 Time: ${time}
 Guests: ${guests}`;
 
-    const phoneNumber = "8074505354"; 
+    const phoneNumber = "8074505354";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -41,29 +41,43 @@ Guests: ${guests}`;
 
         <form className="booking-form" onSubmit={handleSubmit}>
 
-          <input type="text" placeholder="Your Name" required />
+          <div className="input-group">
+            <label>Your Name</label>
+            <input type="text" name="name" required />
+          </div>
 
-          <input
-            type="date"
-            ref={dateRef}
-            onClick={() => dateRef.current.showPicker()}
-            required
-          />
+          <div className="input-group">
+            <label>Date</label>
+            <input
+              type="date"
+              name="date"
+              ref={dateRef}
+              onClick={() => dateRef.current.showPicker()}
+              required
+            />
+          </div>
 
-          <input
-            type="time"
-            ref={timeRef}
-            onClick={() => timeRef.current.showPicker()}
-            required
-          />
+          <div className="input-group">
+            <label>Time</label>
+            <input
+              type="time"
+              name="time"
+              ref={timeRef}
+              onClick={() => timeRef.current.showPicker()}
+              required
+            />
+          </div>
 
-          <input
-            type="number"
-            placeholder="Number of Guests"
-            min="1"
-            max="20"
-            required
-          />
+          <div className="input-group">
+            <label>Number of Guests</label>
+            <input
+              type="number"
+              name="guests"
+              min="1"
+              max="20"
+              required
+            />
+          </div>
 
           <button type="submit">Book Now</button>
 
