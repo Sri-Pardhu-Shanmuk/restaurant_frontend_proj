@@ -41,3 +41,17 @@ button {
 ul, ol {
   list-style: none;
 }
+
+
+@media (hover: none) {
+
+  a:hover,
+  button:hover {
+    color: inherit;
+    background: inherit;
+    transform: none;
+    box-shadow: none;
+    text-decoration: none;
+  }
+
+}
