@@ -1,7 +1,7 @@
-/* heroSectioncss.css */
+/* ===== HERO SECTION ===== */
 
 .hero-section {
-  height: 100vh;
+  min-height: 100vh; /* FIXED from 100vh issue */
 
   /* Dark overlay + background image */
   background: 
@@ -11,30 +11,33 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: scroll; /* prevents mobile issues */
 
   display: flex;
   align-items: center;
   justify-content: flex-start;
+
+  padding: 0 5%; /* prevents overflow */
 }
 
-/* Content container */
+/* ===== CONTENT ===== */
+
 .hero-content {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 10%;
-  /* border: 1px solid rgba(250, 0, 0, 1); */
+  width: 100%;
   max-width: 600px;
   color: white;
 }
 
-/* Heading */
+/* ===== HEADING ===== */
+
 .hero-content h1 {
   font-size: 3rem;
   font-weight: 600;
   line-height: 1.2;
 }
 
-/* Paragraph */
+/* ===== PARAGRAPH ===== */
+
 .hero-content p {
   margin-top: 15px;
   font-size: 1rem;
@@ -42,14 +45,17 @@
   line-height: 1.6;
 }
 
-/* Buttons container */
+/* ===== BUTTONS ===== */
+
 .t-buttons {
   margin-top: 25px;
   display: flex;
   gap: 15px;
+  flex-wrap: wrap; /* prevents overflow */
 }
 
-/* View Menu button (secondary) */
+/* ===== MENU BUTTON ===== */
+
 .menu-button {
   background: transparent;
   border: 1px solid #fff;
@@ -64,7 +70,8 @@
   color: black;
 }
 
-/* Book Table button (primary CTA) */
+/* ===== BOOK TABLE BUTTON ===== */
+
 .bt-button {
   background: linear-gradient(45deg, #ff7a18, #ffb347);
   padding: 12px 25px;
@@ -84,4 +91,26 @@
   box-shadow: 
     0 6px 20px rgba(255, 122, 24, 0.6),
     0 0 30px rgba(255, 122, 24, 0.5);
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .t-buttons {
+    justify-content: center;
+  }
 }
