@@ -21,7 +21,7 @@ Date: ${date}
 Time: ${time}
 Guests: ${guests}`;
 
-    const phoneNumber = "8074505354";
+    const phoneNumber = "918074505354";
 
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -74,7 +74,7 @@ Guests: ${guests}`;
               type="number"
               name="guests"
               min="1"
-              max="20"
+              max="10"
               required
             />
           </div>
